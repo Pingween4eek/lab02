@@ -27,7 +27,7 @@ int main(){
 
 			case 3:
 				for (int i = 0; i < n; i++)
-				printf("%s, price = %d, count = %d", arr[i].name, arr[i].price, arr[i].count);
+				printf("%s, price = %d, count = %d\n", arr[i].name, arr[i].price, arr[i].count);
 				break;
 
 			default:

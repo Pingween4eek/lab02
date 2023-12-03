@@ -10,7 +10,7 @@ void write(struct console *arr, int n){
 	fprintf(f, "%d\n", n);
 
 	for (int i = 0; i < n; i++)
-	fprintf(f, "%s, price = %d, count = %d\n", arr[i].name, arr[i].price, arr[i].count);
+	fprintf(f, "%s %d %d\n", arr[i].name, arr[i].price, arr[i].count);
 
 	fclose(f); 
 }
@@ -41,16 +41,16 @@ void create(struct console **arr, int *n){
 		printf("price = ");
 		scanf("%d", &(*arr)[i].price);
 
-		while (&(*arr)[i].price <= 0){
+		while ((*arr)[i].price <= 0){
 			printf("Incorrect price!\n");
 			printf("price = ");
-			scanf("%d", &(*arr)[i].price); 
+			scanf("%d", &(*arr)[i].price);
 		}
 
 		printf("count = ");
 		scanf("%d", &(*arr)[i].count);
 
-		while (&(*arr)[i].count < 0){
+		while ((*arr)[i].count < 0){
 			printf("Incorrect count!\n");
 			printf("count = ");
 			scanf("%d", &(*arr)[i].count);
