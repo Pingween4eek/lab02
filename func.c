@@ -7,10 +7,10 @@ void write(struct console *arr, int n){
 
 	FILE *f = fopen("file.txt", "w");
 	if (!f) return;
-	fprint(f, "%d\n", n);
+	fprintf(f, "%d\n", n);
 
 	for (int i = 0; i < n; i++)
-	fprint(f, "%s, price = %d, count = %d\n", arr[i].name, arr[i].price, arr[i].count);
+	fprintf(f, "%s, price = %d, count = %d\n", arr[i].name, arr[i].price, arr[i].count);
 
 	fclose(f); 
 }
@@ -43,7 +43,7 @@ void create(struct console **arr, int *n){
 
 		while (&(*arr)[i].price <= 0){
 			printf("Incorrect price!\n");
-			prinf("price = ");
+			printf("price = ");
 			scanf("%d", &(*arr)[i].price); 
 		}
 

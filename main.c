@@ -22,7 +22,7 @@ int main(){
 			case 2:
 				read(&arr, &n);
 				if (!arr) printf("Read Error\n");
-				else printf("Loaded &d\n", n);
+				else printf("Loaded %d\n", n);
 				break;
 
 			case 3:
