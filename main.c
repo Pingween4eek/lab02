@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 #include "func.h"
 
 int main(){
@@ -10,7 +12,7 @@ int main(){
 	while (stop != 1){
 		int key;
 
-		printf("1 - create, 2 - read, 3 - print\n");
+		printf("1 - create, 2 - read, 3 - print, 4 - search\n");
 		scanf("%d", &key);
 
 		switch(key){
@@ -28,6 +30,11 @@ int main(){
 			case 3:
 				for (int i = 0; i < n; i++)
 				printf("%s, price = %d, count = %d\n", arr[i].name, arr[i].price, arr[i].count);
+				break;
+
+			case 4:
+				search(&arr, &n);
+				if (!arr) printf("Scan Error\n");
 				break;
 
 			default:
