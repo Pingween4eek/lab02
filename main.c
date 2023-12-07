@@ -33,7 +33,8 @@ int main(){
 				break;
 
 			case 4:
-				search(&arr, &n);
+				if (!arr) read(&arr, &n);
+				search(arr, n);
 				if (!arr) printf("Scan Error\n");
 				break;
 
